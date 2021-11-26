@@ -3,7 +3,7 @@ const Navigation = () => {
 	return (
 		<nav>
 			<Link href='/'>
-				<a>LOGO</a>
+				<a>Logo</a>
 			</Link>
 		</nav>
 	);

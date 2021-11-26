@@ -1,18 +1,140 @@
-// background no repeat and center/cover
+// fonts start
+// fonts start
+@mixin main-font() {
+	font-family: $main-f;
+}
+
+@mixin sec-font() {
+	font-family: $sec-f;
+}
+// fonts end
+// fonts end
+
+// bg start
 @mixin bg-no-repeat {
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
-// flex row/colum center
+
+// bg end
+
+// ---------
+
+// flex start
+// flex start
 @mixin flex-center-row() {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
+
 @mixin flex-center-column() {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+}
+
+@mixin flex-center-row-end() {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+@mixin flex-center-row-start() {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+@mixin flex-center-column-end() {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
+}
+@mixin flex-center-column-start() {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+// flex end
+// flex end
+// flex end
+
+@mixin pseudo() {
+	position: absolute;
+	display: block;
+	content: '';
+}
+// ---------
+
+// heading start
+@mixin heading() {
+	margin-bottom: 0.35rem;
+	line-height: 1.2;
+	color: inherit;
+	@include sec-font;
+}
+
+@mixin heading-1 {
+	@include heading;
+	font-size: 3.375rem;
+}
+
+@mixin heading-2 {
+	@include heading;
+	font-size: 2.966rem;
+}
+
+@mixin heading-3 {
+	@include heading;
+	font-size: 1.5rem;
+}
+
+@mixin heading-4 {
+	@include heading;
+	font-size: 1.318rem;
+}
+
+@mixin heading-5 {
+	@include heading;
+	font-size: 1rem;
+}
+
+@mixin heading-6 {
+	@include heading;
+	font-size: 0.875rem;
+}
+// heading end
+
+// ---------
+
+// para and span start
+@mixin paragraph() {
+	font-size: 1.6rem;
+	line-height: 1.2;
+	font-weight: 200;
+	@include main-font;
+}
+@mixin span() {
+	font-size: 1.4rem;
+	line-height: 1.2;
+	font-weight: 600;
+	@include main-font;
+}
+// para and span end
+
+// container max-width
+@mixin max-width() {
+	max-width: 130rem;
+	margin: 0 auto;
+	width: 100%;
+}
+
+@mixin grid-container {
+	display: grid;
+	justify-content: center;
+	grid-template-columns: repeat(auto-fit, minmax(30rem, 40rem));
 }

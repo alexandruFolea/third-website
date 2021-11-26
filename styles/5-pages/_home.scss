@@ -1,7 +1,11 @@
 .homepage {
-	display: flex;
-	font-size: 2.5rem;
-	// font-family: $display-font;
-	@include flex-center-row;
+	@include max-width;
 	flex: 1;
+
+	@include flex-center-column;
+	grid-template-rows: 1fr 10rem 1fr;
+
+	h1 {
+		@include heading-1;
+	}
 }
