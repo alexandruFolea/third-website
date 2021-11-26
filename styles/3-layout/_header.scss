@@ -37,7 +37,9 @@
 			}
 		}
 
-		&.active {
+		//query
+		@include md {
+			transition: transform 0.2rem ease-in;
 			position: absolute;
 			z-index: 90;
 			height: 60rem;
@@ -46,21 +48,25 @@
 			top: 0;
 			right: 0;
 			left: 0;
-			@include flex-center-column-end;
+			transform: translateY(-60rem);
+			// display: none;
 
-			li {
-				margin-bottom: 2rem;
-				a {
-					color: $mono8;
-					@include heading-3;
-					font-size: 3rem;
+			&.active {
+				@include flex-center-column-end;
+				transform: translateY(0);
+
+				transition: transform 0.5s ease;
+
+				li {
+					margin-bottom: 2rem;
+					margin-right: 6rem;
+					a {
+						color: $mono8;
+						@include heading-3;
+						font-size: 3rem;
+					}
 				}
 			}
-		}
-
-		//query
-		@include md {
-			display: none;
 		}
 	}
 

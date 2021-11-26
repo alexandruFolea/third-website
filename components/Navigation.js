@@ -26,17 +26,17 @@ const Navigation = () => {
 					</Link>
 				</li>
 				<li onClick={closeMobileMenu}>
-					<Link href='/'>
+					<Link href='/brand'>
 						<a>Brand</a>
 					</Link>
 				</li>
 				<li onClick={closeMobileMenu}>
-					<Link href='/'>
+					<Link href='/design'>
 						<a>Design</a>
 					</Link>
 				</li>
 				<li onClick={closeMobileMenu}>
-					<Link href='/'>
+					<Link href='/development'>
 						<a>Development</a>
 					</Link>
 				</li>
