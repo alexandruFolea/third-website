@@ -31,7 +31,7 @@ const Navigation = () => {
 					</Link>
 				</li>
 				<li onClick={closeMobileMenu}>
-					<Link href='/design'>
+					<Link href='/'>
 						<a>Design</a>
 					</Link>
 				</li>
