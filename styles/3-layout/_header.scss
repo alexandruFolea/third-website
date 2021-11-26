@@ -1,11 +1,80 @@
-nav {
-	height: 6rem;
-
-	@include flex-center-row;
+.navbar {
+	// height: 6rem;
 	@include max-width;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 2rem;
+	color: $mono2;
+	position: relative;
 
-	a {
-		font-size: 1.6rem;
-		color: $mono2;
+	&__logo {
+		a {
+			@include heading-1;
+			color: $mono2;
+		}
+		position: relative;
+		z-index: 200;
+
+		&.active {
+			a {
+				color: $mono8;
+			}
+		}
+	}
+
+	&__list {
+		@include flex-center-row;
+
+		li {
+			@include paragraph;
+			margin-right: 4rem;
+
+			a {
+				color: $mono2;
+			}
+		}
+
+		&.active {
+			position: absolute;
+			z-index: 90;
+			height: 60rem;
+			width: 100%;
+			background: #000;
+			top: 0;
+			right: 0;
+			left: 0;
+			@include flex-center-column-end;
+
+			li {
+				margin-bottom: 2rem;
+				a {
+					color: $mono8;
+					@include heading-3;
+					font-size: 3rem;
+				}
+			}
+		}
+
+		//query
+		@include md {
+			display: none;
+		}
+	}
+
+	&__burger {
+		display: none;
+
+		@include md {
+			position: relative;
+			z-index: 100;
+			display: block;
+			cursor: pointer;
+			font-size: 3rem;
+			color: $mono2;
+		}
+		&.active {
+			color: $mono5;
+		}
 	}
 }

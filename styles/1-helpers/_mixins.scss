@@ -74,7 +74,7 @@
 @mixin heading() {
 	margin-bottom: 0.35rem;
 	line-height: 1.2;
-	color: inherit;
+	// color: inherit;
 	@include sec-font;
 }
 
