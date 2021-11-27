@@ -1,11 +1,35 @@
 import Link from 'next/link';
 import { FaBars } from 'react-icons/fa';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import {
+	SiHomeassistant,
+	SiCapacitor,
+	SiHarbor,
+	SiOpenid,
+} from 'react-icons/si';
 
 const Navigation = () => {
+	let windowSize = 720;
+
 	const [open, setOpen] = useState(false);
 	const handleClick = () => setOpen(!open);
 	const closeMobileMenu = () => setOpen(false);
+
+	// if (window.innerWidth > 720) {
+	// 	closeMobileMenu();
+	// }
+
+	useEffect(() => {
+		const handleResize = () => {
+			if (window.innerWidth > 719) {
+				closeMobileMenu();
+			}
+		};
+		window.addEventListener('resize', handleResize);
+		return () => {
+			window.removeEventListener('resize', handleResize);
+		};
+	});
 
 	return (
 		<nav className='navbar'>
@@ -21,21 +45,25 @@ const Navigation = () => {
 
 			<ul className={open ? 'navbar__list active' : 'navbar__list'}>
 				<li onClick={closeMobileMenu}>
+					{open ? <SiHomeassistant /> : ''}
 					<Link href='/'>
 						<a>Home</a>
 					</Link>
 				</li>
 				<li onClick={closeMobileMenu}>
+					{open ? <SiCapacitor /> : ''}
 					<Link href='/brand'>
 						<a>Brand</a>
 					</Link>
 				</li>
 				<li onClick={closeMobileMenu}>
+					{open ? <SiHarbor /> : ''}
 					<Link href='/design'>
 						<a>Design</a>
 					</Link>
 				</li>
 				<li onClick={closeMobileMenu}>
+					{open ? <SiOpenid /> : ''}
 					<Link href='/development'>
 						<a>Development</a>
 					</Link>

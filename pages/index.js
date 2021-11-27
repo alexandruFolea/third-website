@@ -9,7 +9,16 @@ export default function Home() {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 
-			<h1>Landing Page</h1>
+			<section className='main__section'>
+				<div className='main__section__wrapper'>
+					<div className='container container__left'>
+						<h1>I`m Left</h1>
+					</div>
+					<div className='container container__right'>
+						<h1>I`m right</h1>
+					</div>
+				</div>
+			</section>
 		</div>
 	);
 }
