@@ -6,7 +6,9 @@ import {
 	SiCapacitor,
 	SiHarbor,
 	SiOpenid,
+	SiDwavesystems,
 } from 'react-icons/si';
+// import { GrContactInfo } from 'react-icons/gr';
 
 const Navigation = () => {
 	let windowSize = 720;
@@ -52,20 +54,26 @@ const Navigation = () => {
 				</li>
 				<li onClick={closeMobileMenu}>
 					{open ? <SiCapacitor /> : ''}
-					<Link href='/brand'>
-						<a>Brand</a>
+					<Link href='/about'>
+						<a>About</a>
 					</Link>
 				</li>
 				<li onClick={closeMobileMenu}>
 					{open ? <SiHarbor /> : ''}
-					<Link href='/design'>
-						<a>Design</a>
+					<Link href='/design-and-development'>
+						<a>Design & Development</a>
 					</Link>
 				</li>
 				<li onClick={closeMobileMenu}>
 					{open ? <SiOpenid /> : ''}
-					<Link href='/development'>
-						<a>Development</a>
+					<Link href='/portfolio'>
+						<a>Portfolio</a>
+					</Link>
+				</li>
+				<li onClick={closeMobileMenu}>
+					{open ? <SiDwavesystems /> : ''}
+					<Link href='/contact'>
+						<a>Contact</a>
 					</Link>
 				</li>
 			</ul>

@@ -1,6 +1,167 @@
 .footer {
-	height: 6rem;
-	font-size: 1.6rem;
-	// font-family: $display-font;
-	@include flex-center-row;
+	width: 100%;
+	background: $mono2;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 1fr 5rem;
+	align-items: flex-start;
+	justify-items: center;
+	font-family: $main-f;
+	color: $mono8;
+	padding: 4rem 0;
+	box-shadow: 0 -0.2rem 0.6rem rgba($mono4, 0.9);
+	position: relative;
+	z-index: 100;
+
+	@include md {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.footer__left {
+		@include md {
+			margin-bottom: 3rem;
+		}
+		h1 {
+			color: $mono8;
+			padding-bottom: 0.5rem;
+			font-size: 3rem;
+			border-bottom: 0.2rem solid $cyan;
+			// font-family: $display-font;
+		}
+	}
+	.footer__center {
+		@include md {
+			margin-bottom: 3rem;
+		}
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		// padding-top: 2rem;
+
+		.footer__center__top {
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+
+			h4 {
+				font-size: 1.8rem;
+				margin-bottom: 0.4em;
+				// font-family: $display-font;
+			}
+
+			svg {
+				height: 4rem;
+				width: 4rem;
+				margin-right: 1rem;
+				color: $cyan;
+			}
+		}
+
+		.footer__center__list {
+			// padding-left: 3rem;
+			// border-left: 0.3rem solid $cyan;
+
+			li {
+				margin-bottom: 1rem;
+			}
+			a {
+				color: $mono8;
+				font-size: 1.4rem;
+				font-weight: 200;
+			}
+		}
+	}
+
+	.footer__right {
+		@include md {
+			margin-bottom: 3rem;
+			text-align: center;
+		}
+		height: 100%;
+		width: 100%;
+		// background: cyan;
+		.contact {
+			width: 90%;
+			@include md {
+				width: 80%;
+				margin: 0 auto;
+			}
+			form {
+				display: flex;
+				flex-direction: column;
+				h4 {
+					margin-bottom: 1.4rem;
+					font-size: 1.8rem;
+					// font-family: $display-font;
+					display: flex;
+					align-items: center;
+					svg {
+						margin-right: 1rem;
+						font-size: 3rem;
+						color: $cyan;
+					}
+
+					@include md {
+						justify-content: center;
+						// text-align: center;
+						font-size: 3rem;
+					}
+				}
+
+				input {
+					padding: 0.6rem;
+					font-family: $main-f;
+					margin-bottom: 0.4rem;
+				}
+
+				textarea {
+					height: 10rem;
+					resize: none;
+					padding: 0.6rem;
+					margin-bottom: 1.4rem;
+					font-family: $main-f;
+				}
+
+				button {
+					display: inline-block;
+					color: $mono2;
+					font-size: 1.4rem;
+					padding: 1.5rem 5rem;
+
+					background: $mono8;
+					cursor: pointer;
+					transition: all 0.2s ease-in;
+					margin-bottom: 2rem;
+
+					&:hover {
+						background: $mono7;
+						transform: translateY(-0.4rem);
+						box-shadow: 0 0.1rem 0.4rem $cyan;
+					}
+				}
+				.prompt__message {
+					font-size: 1.8rem;
+					color: rgb(31, 216, 31);
+				}
+			}
+		}
+	}
+	.footer__bottom {
+		height: 100%;
+		// background: cyan;
+		grid-column: span 3;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		h4 {
+			font-size: 1.2rem;
+			font-weight: 200;
+			font-family: $main-f;
+		}
+	}
 }

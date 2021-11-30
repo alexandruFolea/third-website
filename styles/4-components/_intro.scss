@@ -1,0 +1,78 @@
+.intro {
+	height: 100vh;
+	width: 100%;
+	// background: white;
+
+	&__wrapper {
+		height: 80%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		@include lg {
+			height: 100%;
+		}
+
+		.grid__container {
+			// background: white;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+
+			@include lg {
+				grid-template-columns: 1fr;
+				align-content: center;
+				justify-items: center;
+				// background: green;
+			}
+
+			.grid__left {
+				// background: beige;
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				justify-content: center;
+				padding: 0 2rem;
+
+				@include lg {
+					align-items: center;
+				}
+
+				h1 {
+					font-family: $sec-f;
+					font-size: 7.5rem;
+					line-height: 1;
+					@include lg {
+						font-size: 7rem;
+					}
+				}
+
+				p {
+					font-family: $main-f;
+					font-size: 3rem;
+					font-weight: 200;
+					margin: 2rem 0;
+					@include md {
+						font-size: 2.2rem;
+						// margin-bottom: 6rem;
+					}
+				}
+
+				a {
+					font-family: $main-f;
+					padding: 2rem 4rem;
+					font-size: 1.6rem;
+					color: $mono8;
+					background: $mono2;
+				}
+			}
+			.grid__right {
+				-webkit-filter: drop-shadow(0.4rem 0.4rem 0.3rem rgba($mono4, 0.7));
+				filter: drop-shadow(0.4rem 0.4rem 0.3rem rgba($mono4, 0.7));
+
+				@include lg {
+					padding: 0 2rem;
+				}
+			}
+		}
+	}
+}

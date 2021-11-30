@@ -30,10 +30,14 @@
 			@include paragraph;
 			margin-right: 4rem;
 
+			@include lg {
+				margin-right: 2rem;
+			}
+
 			a {
 				color: $mono2;
 				font-weight: 600;
-				letter-spacing: 0.15rem;
+				letter-spacing: 0.12rem;
 			}
 		}
 
@@ -86,12 +90,21 @@
 						animation: bounce-in-right 1.1s
 							cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.7s both;
 					}
-				}
+					&:nth-child(5) {
+						animation: bounce-in-right 1.1s
+							cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.8s both;
 
-				svg {
-					color: $crimson;
-					font-size: 2.4rem;
-					margin-right: 1rem;
+						svg {
+							stroke: $crimson;
+							// background: red;
+						}
+					}
+
+					svg {
+						font-size: 2.4rem;
+						margin-right: 1rem;
+						color: $crimson;
+					}
 				}
 			}
 		}

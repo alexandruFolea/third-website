@@ -81,6 +81,7 @@
 @mixin heading-1 {
 	@include heading;
 	font-size: 3.375rem;
+	letter-spacing: 0.13rem;
 }
 
 @mixin heading-2 {
@@ -90,7 +91,8 @@
 
 @mixin heading-3 {
 	@include heading;
-	font-size: 1.5rem;
+	font-size: 2rem;
+	letter-spacing: 0.13rem;
 }
 
 @mixin heading-4 {
@@ -114,8 +116,8 @@
 // para and span start
 @mixin paragraph() {
 	font-size: 1.6rem;
-	line-height: 1.2;
-	font-weight: 200;
+	line-height: 1.4;
+	font-weight: 400;
 	@include main-font;
 }
 @mixin span() {
