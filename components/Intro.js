@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import NavButton from './NavButton';
 
 const Intro = () => {
 	return (
@@ -10,16 +11,13 @@ const Intro = () => {
 					<div className='grid__left'>
 						<h1>Hi, I&apos;m Alex</h1>
 						<p>a web developer with affinity to front-end</p>
-
-						<Link href='/portfolio'>
-							<a>view work</a>
-						</Link>
+						<NavButton href='/portfolio' name='portfolio' />
 					</div>
 					<div className='grid__right'>
 						<Image
 							width='600'
 							height='600'
-							src='/coding.svg'
+							src='/intro.svg'
 							alt='Alex Folea Coding'
 						/>
 					</div>

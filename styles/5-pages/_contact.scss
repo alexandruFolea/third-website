@@ -1,0 +1,26 @@
+.contact {
+	height: 100vh;
+	width: 100%;
+
+	&__wrapper {
+		height: 70%;
+		@include max-width;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		// background: beige;
+		align-items: center;
+		justify-items: center;
+		@include lg {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.contact__image {
+		@include md {
+			padding: 0 2rem;
+		}
+		// grid-column: 1 / 2;
+		-webkit-filter: drop-shadow(0.4rem 0.4rem 0.3rem rgba($mono4, 0.7));
+		filter: drop-shadow(0.4rem 0.4rem 0.3rem rgba($mono4, 0.7));
+	}
+}

@@ -1,13 +1,15 @@
 import Link from 'next/link';
 import { FaBars } from 'react-icons/fa';
 import { useState, useEffect } from 'react';
+import { SiHomeassistant, SiSuperuser } from 'react-icons/si';
+
 import {
-	SiHomeassistant,
-	SiCapacitor,
-	SiHarbor,
-	SiOpenid,
-	SiDwavesystems,
-} from 'react-icons/si';
+	MdOutlineDesignServices,
+	MdOutlineContactMail,
+	MdCodeOff,
+} from 'react-icons/md';
+
+import Image from 'next/image';
 // import { GrContactInfo } from 'react-icons/gr';
 
 const Navigation = () => {
@@ -16,10 +18,6 @@ const Navigation = () => {
 	const [open, setOpen] = useState(false);
 	const handleClick = () => setOpen(!open);
 	const closeMobileMenu = () => setOpen(false);
-
-	// if (window.innerWidth > 720) {
-	// 	closeMobileMenu();
-	// }
 
 	useEffect(() => {
 		const handleResize = () => {
@@ -40,7 +38,14 @@ const Navigation = () => {
 				onClick={closeMobileMenu}
 			>
 				<Link href='/'>
-					<a>Logo</a>
+					<a>
+						<Image
+							src='/alexLogo.png'
+							alt='developed AF logo'
+							width='80'
+							height='80'
+						/>
+					</a>
 				</Link>
 				{/* <h1>Logo</h1> */}
 			</div>
@@ -53,25 +58,26 @@ const Navigation = () => {
 					</Link>
 				</li>
 				<li onClick={closeMobileMenu}>
-					{open ? <SiCapacitor /> : ''}
+					{open ? <SiSuperuser /> : ''}
 					<Link href='/about'>
 						<a>About</a>
 					</Link>
 				</li>
 				<li onClick={closeMobileMenu}>
-					{open ? <SiHarbor /> : ''}
-					<Link href='/design-and-development'>
-						<a>Design & Development</a>
-					</Link>
-				</li>
-				<li onClick={closeMobileMenu}>
-					{open ? <SiOpenid /> : ''}
+					{open ? <MdCodeOff /> : ''}
 					<Link href='/portfolio'>
 						<a>Portfolio</a>
 					</Link>
 				</li>
 				<li onClick={closeMobileMenu}>
-					{open ? <SiDwavesystems /> : ''}
+					{open ? <MdOutlineDesignServices /> : ''}
+					<Link href='/design-and-development'>
+						<a>Design & Development</a>
+					</Link>
+				</li>
+
+				<li onClick={closeMobileMenu}>
+					{open ? <MdOutlineContactMail /> : ''}
 					<Link href='/contact'>
 						<a>Contact</a>
 					</Link>

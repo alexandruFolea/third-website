@@ -5,9 +5,6 @@ import Link from 'next/link';
 const Footer = () => {
 	return (
 		<footer className='footer'>
-			<div className='footer__left'>
-				<h1>developedAF 2021</h1>
-			</div>
 			<div className='footer__center'>
 				<div className='footer__center__top'>
 					<BiDialpad />
@@ -19,7 +16,11 @@ const Footer = () => {
 							<a>Home</a>
 						</Link>
 					</li>
-
+					<li>
+						<Link href='/about'>
+							<a>About</a>
+						</Link>
+					</li>
 					<li>
 						<Link href='/portfolio'>
 							<a>Portfolio</a>
@@ -30,11 +31,7 @@ const Footer = () => {
 							<a>Design & Dev</a>
 						</Link>
 					</li>
-					<li>
-						<Link href='/about'>
-							<a>About</a>
-						</Link>
-					</li>
+
 					<li>
 						<Link href='/contact'>
 							<a>Contact</a>
@@ -42,11 +39,9 @@ const Footer = () => {
 					</li>
 				</ul>
 			</div>
-			<div className='footer__right'>
-				<Contact />
-			</div>
-			<div className='footer__bottom'>
-				<h4>Copyright &copy; 2021 Alex Folea Development</h4>
+			<div className='footer__left'>
+				<p>developedAF 2021</p>
+				<span>Copyright &copy; 2021 Alex Folea Development</span>
 			</div>
 		</footer>
 	);

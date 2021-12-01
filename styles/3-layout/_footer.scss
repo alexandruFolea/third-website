@@ -1,14 +1,14 @@
 .footer {
 	width: 100%;
-	background: $mono2;
+	background: $mono1;
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: 1fr 5rem;
 	align-items: flex-start;
 	justify-items: center;
 	font-family: $main-f;
 	color: $mono8;
-	padding: 4rem 0;
+	padding: 4rem 0 0 0;
 	box-shadow: 0 -0.2rem 0.6rem rgba($mono4, 0.9);
 	position: relative;
 	z-index: 100;
@@ -20,14 +20,19 @@
 	}
 
 	.footer__left {
+		text-align: center;
+		align-self: flex-end;
 		@include md {
+			align-self: center;
 			margin-bottom: 3rem;
 		}
-		h1 {
+		p {
+			@include heading-1;
 			color: $mono8;
 			padding-bottom: 0.5rem;
-			font-size: 3rem;
+			// font-size: 3rem;
 			border-bottom: 0.2rem solid $cyan;
+			margin-bottom: 2rem;
 			// font-family: $display-font;
 		}
 	}
@@ -73,95 +78,6 @@
 				font-size: 1.4rem;
 				font-weight: 200;
 			}
-		}
-	}
-
-	.footer__right {
-		@include md {
-			margin-bottom: 3rem;
-			text-align: center;
-		}
-		height: 100%;
-		width: 100%;
-		// background: cyan;
-		.contact {
-			width: 90%;
-			@include md {
-				width: 80%;
-				margin: 0 auto;
-			}
-			form {
-				display: flex;
-				flex-direction: column;
-				h4 {
-					margin-bottom: 1.4rem;
-					font-size: 1.8rem;
-					// font-family: $display-font;
-					display: flex;
-					align-items: center;
-					svg {
-						margin-right: 1rem;
-						font-size: 3rem;
-						color: $cyan;
-					}
-
-					@include md {
-						justify-content: center;
-						// text-align: center;
-						font-size: 3rem;
-					}
-				}
-
-				input {
-					padding: 0.6rem;
-					font-family: $main-f;
-					margin-bottom: 0.4rem;
-				}
-
-				textarea {
-					height: 10rem;
-					resize: none;
-					padding: 0.6rem;
-					margin-bottom: 1.4rem;
-					font-family: $main-f;
-				}
-
-				button {
-					display: inline-block;
-					color: $mono2;
-					font-size: 1.4rem;
-					padding: 1.5rem 5rem;
-
-					background: $mono8;
-					cursor: pointer;
-					transition: all 0.2s ease-in;
-					margin-bottom: 2rem;
-
-					&:hover {
-						background: $mono7;
-						transform: translateY(-0.4rem);
-						box-shadow: 0 0.1rem 0.4rem $cyan;
-					}
-				}
-				.prompt__message {
-					font-size: 1.8rem;
-					color: rgb(31, 216, 31);
-				}
-			}
-		}
-	}
-	.footer__bottom {
-		height: 100%;
-		// background: cyan;
-		grid-column: span 3;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-
-		h4 {
-			font-size: 1.2rem;
-			font-weight: 200;
-			font-family: $main-f;
 		}
 	}
 }

@@ -1,0 +1,65 @@
+.contact__form {
+	width: 70%;
+
+	@include lg {
+		padding-top: 5rem;
+	}
+	form {
+		display: flex;
+		flex-direction: column;
+		h1 {
+			color: $mono1;
+			@include heading-1;
+			display: flex;
+			align-items: center;
+			margin-bottom: 3rem;
+			svg {
+				margin-right: 1rem;
+				font-size: 3rem;
+				color: $cyan;
+			}
+
+			@include md {
+				justify-content: center;
+				// text-align: center;
+				font-size: 3rem;
+			}
+		}
+
+		input {
+			padding: 0.6rem;
+			font-family: $main-f;
+			margin-bottom: 0.4rem;
+		}
+
+		textarea {
+			height: 10rem;
+			resize: none;
+			padding: 0.6rem;
+			margin-bottom: 1.4rem;
+			font-family: $main-f;
+		}
+
+		button {
+			display: inline-block;
+			color: $mono2;
+			font-size: 1.4rem;
+			padding: 1.5rem 5rem;
+			@include paragraph;
+			background: $mono6;
+			cursor: pointer;
+			transition: all 0.2s ease-in;
+			// margin-bottom: 2rem;
+
+			&:hover {
+				background: $mono5;
+				transform: translateY(-0.4rem);
+				box-shadow: 0 0.1rem 0.4rem $cyan;
+			}
+		}
+		.prompt__message {
+			font-size: 1.8rem;
+			color: rgb(31, 216, 31);
+		}
+	}
+}

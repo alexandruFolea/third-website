@@ -1,16 +1,15 @@
 .portfolio {
-	height: 100vh;
 	width: 100%;
 	// background: rgb(180, 180, 78);
 
 	&__wrapper {
-		height: 100%;
+		// height: 100%;
 		// background: red;
 	}
 
 	&__banner {
 		height: 35rem;
-		color: $mono2;
+		// color: $mono2;
 		background: $mono8;
 		box-shadow: $box-sh3;
 		@include flex-center-column;
@@ -43,11 +42,109 @@
 
 			img {
 				// padding-right: 2rem;
-				-webkit-filter: drop-shadow(0.4rem 0.4rem 0.3rem rgba($mono4, 0.3));
-				filter: drop-shadow(0.4rem 0.4rem 0.3rem rgba($mono4, 0.3));
+				-webkit-filter: drop-shadow(0.4rem 0.4rem 0.3rem rgba($mono4, 0.7));
+				filter: drop-shadow(0.4rem 0.4rem 0.3rem rgba($mono4, 0.7));
 			}
 			vg {
 				padding: 4rem;
+			}
+		}
+	}
+
+	&__container {
+		min-height: 100vh;
+		padding: 5rem 0 14rem 0;
+		@include max-width;
+		@include flex-center-column;
+		// background: $mono7;
+		gap: 8rem;
+
+		.container__item {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+
+			width: 100%;
+			max-width: 80rem;
+			box-shadow: $box-sh3;
+			margin: 0;
+			padding: 0;
+
+			@include md {
+				grid-template-columns: 1fr;
+				align-items: center;
+				justify-items: center;
+				box-shadow: none;
+			}
+
+			&__left {
+				background: $mono8;
+				display: flex;
+				align-items: flex-start;
+				justify-content: center;
+				flex-direction: column;
+				padding: 5rem;
+
+				@include md {
+					margin: auto;
+					align-items: center;
+					min-width: 40rem;
+				}
+
+				.item__title {
+					margin-bottom: 1rem;
+					@include md {
+						margin-bottom: 2rem;
+					}
+					h3 {
+						@include heading-3;
+						letter-spacing: 0.2rem;
+						color: $mono1;
+					}
+				}
+				.item__desc {
+					margin-bottom: 1rem;
+
+					p {
+						@include paragraph;
+					}
+
+					@include md {
+						margin-bottom: 2rem;
+					}
+				}
+
+				.item__stacks {
+					display: flex;
+					align-items: center;
+					margin-bottom: 3rem;
+					@include md {
+						margin-bottom: 4rem;
+					}
+					span {
+						@include span;
+						margin-right: 2rem;
+					}
+
+					li {
+						@include span;
+						margin-right: 0.6rem;
+						padding: 0.4rem 0.8rem;
+						color: $mono5;
+						background: $mono6;
+					}
+				}
+			}
+			&__right {
+				// height: 100%;
+				// width: 100%;
+				margin-bottom: -0.3rem;
+				padding: 0;
+				img {
+					width: 100%;
+					height: 100%;
+					margin: 0 auto;
+					object-fit: cover;
+				}
 			}
 		}
 	}

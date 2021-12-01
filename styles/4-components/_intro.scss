@@ -17,6 +17,7 @@
 			// background: white;
 			display: grid;
 			grid-template-columns: 1fr 1fr;
+			padding: 0 2rem;
 
 			@include lg {
 				grid-template-columns: 1fr;
@@ -31,13 +32,14 @@
 				flex-direction: column;
 				align-items: flex-start;
 				justify-content: center;
-				padding: 0 2rem;
+				// padding: 0 2rem;
 
 				@include lg {
 					align-items: center;
 				}
 
 				h1 {
+					color: $mono1;
 					font-family: $sec-f;
 					font-size: 7.5rem;
 					line-height: 1;
@@ -50,19 +52,73 @@
 					font-family: $main-f;
 					font-size: 3rem;
 					font-weight: 200;
-					margin: 2rem 0;
+					margin: 2rem 0 6rem 0;
 					@include md {
 						font-size: 2.2rem;
 						// margin-bottom: 6rem;
 					}
 				}
 
-				a {
-					font-family: $main-f;
-					padding: 2rem 4rem;
-					font-size: 1.6rem;
-					color: $mono8;
-					background: $mono2;
+				.intro__cta {
+					line-height: 6.5rem;
+					height: 6.5rem;
+					text-align: center;
+					width: 250px;
+					cursor: pointer;
+					color: $mono2;
+					transition: all 0.5s;
+					position: relative;
+				}
+				.intro__cta {
+					a {
+						z-index: 2;
+						font-size: 2rem;
+						font-family: $main-f;
+						font-weight: 700;
+						color: $off-blue;
+						transition: color 0.3s ease;
+						display: block;
+						position: absolute;
+						width: 100%;
+						height: 100%;
+						// background: $off-blue;
+
+						&:hover {
+							color: $mono9;
+						}
+					}
+				}
+				.intro__cta::before {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					z-index: 1;
+					transition: all 0.5s;
+					// border: 0.1rem solid $off-blue;
+					// background-color: $off-blue;
+				}
+				.intro__cta::after {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					z-index: 1;
+					transition: all 0.5s;
+					// border: 1px solid $off-blue;
+					// background-color: $mono9;
+				}
+				.intro__cta:hover::before {
+					transform: rotate(-15deg);
+					background-color: $cyan;
+				}
+				.intro__cta:hover::after {
+					transform: rotate(15deg);
+					background-color: rgba($off-blue, 1);
 				}
 			}
 			.grid__right {

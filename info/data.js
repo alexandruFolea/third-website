@@ -12,7 +12,7 @@ export const projects = [
 		title: 'Fitness Center Project',
 		url: 'https://okocha-gym.netlify.app/',
 		img: '/projects/gym-project.jpeg',
-		desc: 'Potential gym application with the ability to transform it into a fitness e-commerce website.',
+		desc: 'Potential gym application',
 		stacks: ['React', 'Sass'],
 	},
 	{

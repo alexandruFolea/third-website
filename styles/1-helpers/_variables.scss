@@ -1,5 +1,6 @@
 // monocromatic color palette
-$mono1: hsl(0, 0%, 0%);
+$mono1: hsl(243, 15%, 28%);
+// $mono1: hsl(0, 0%, 0%);
 $mono2: hsl(210, 10%, 23%);
 $mono3: hsl(210, 9%, 31%);
 $mono4: hsl(208, 7%, 46%);
@@ -10,7 +11,8 @@ $mono8: hsl(210, 16%, 93%);
 $mono9: hsl(210, 17%, 98%);
 
 $crimson: hsl(348, 95%, 50%);
-$cyan: rgb(99, 248, 255);
+$cyan: #61f7ff;
+$off-blue: hsl(243, 15%, 28%);
 // fonts
 $main-f: 'Nunito', sans-serif;
 $sec-f: 'Montagu Slab', serif;

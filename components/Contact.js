@@ -1,7 +1,9 @@
 import { useState } from 'react';
-import emailjs from 'emailjs-com';
 import FormSuccessMessage from './FormSuccessMessage';
 import { FaMailBulk } from 'react-icons/fa';
+import emailjs from 'emailjs-com';
+
+//new
 
 export default function Contact() {
 	const [message, setMessage] = useState(false);
@@ -30,12 +32,12 @@ export default function Contact() {
 	};
 
 	return (
-		<div className='contact' id='contact'>
+		<div className='contact__form' id='contact'>
 			<form onSubmit={handleSumbit}>
 				{/* method that handles the form */}
-				<h4>
+				<h1>
 					<FaMailBulk /> Get in touch!
-				</h4>
+				</h1>
 				<input type='text' placeholder='Subject' name='name' required />
 				<input type='email' placeholder='Your E-mail' name='email' required />
 				<textarea placeholder='Your Message' name='message' required></textarea>
