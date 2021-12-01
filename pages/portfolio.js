@@ -29,7 +29,7 @@ const portfolio = () => {
 									<p>{desc}</p>
 								</div>
 								<ul className='item__stacks'>
-									<span>stack list:</span>
+									<span>built with:</span>
 									{stacks.map((stack, index) => (
 										<li key={index}>{stack}</li>
 									))}

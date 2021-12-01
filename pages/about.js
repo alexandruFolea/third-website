@@ -1,5 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const about = () => {
 	return (
@@ -26,12 +28,31 @@ const about = () => {
 						</p>
 						<p>
 							You can get in touch by leaving a message{' '}
-							<a href='/contact'>here</a>.
+							<Link href='/contact'>
+								<a>here</a>
+							</Link>
+							.
 						</p>
 						<p>
 							Bellow you&apos;ll find some links to my limited social media
 							options.
 						</p>
+						<div className='social__links'>
+							<a
+								href='https://github.com/alexandruFolea'
+								target='_blank'
+								rel='noreferrer'
+							>
+								<FaGithub />
+							</a>
+							<a
+								href='https://www.linkedin.com/in/alexandru-folea/'
+								target='_blank'
+								rel='noreferrer'
+							>
+								<FaLinkedin />
+							</a>
+						</div>
 					</div>
 					<div className='grid__right'>
 						<Image

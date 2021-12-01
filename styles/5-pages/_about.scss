@@ -58,6 +58,32 @@
 					font-weight: 800;
 					letter-spacing: 0.14rem;
 				}
+
+				.social__links {
+					margin-top: 2rem;
+					transition: 0.3s ease-in;
+					@include md {
+						display: flex;
+						justify-content: center;
+
+						background: $mono5;
+						padding: 3rem 0;
+					}
+
+					a {
+						margin-right: 2rem;
+						svg {
+							font-size: 5rem;
+							-webkit-filter: drop-shadow(
+								0.4rem 0.4rem 0.3rem rgba($mono4, 0.7)
+							);
+							filter: drop-shadow(0.4rem 0.4rem 0.3rem rgba($mono4, 0.7));
+						}
+						&:hover {
+							color: $cyan;
+						}
+					}
+				}
 			}
 
 			.grid__right {
