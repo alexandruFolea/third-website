@@ -1,9 +1,16 @@
 import Image from 'next/image';
+import Head from 'next/head';
 import Button from '../components/Button';
 import { projects } from '../info/data';
+
 const portfolio = () => {
 	return (
 		<div className='portfolio'>
+			<Head>
+				<title>Alex Folea - Portfolio Page</title>
+				<meta name='description' content='Alex Folea portfolio projects page' />
+				<link rel='icon' href='/favicon.ico' />
+			</Head>
 			<div className='portfolio__wrapper'>
 				<div className='portfolio__banner'>
 					<div className='banner__info'>

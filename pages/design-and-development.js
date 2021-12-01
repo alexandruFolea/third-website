@@ -11,9 +11,12 @@ const designAndDevelopment = () => {
 		<>
 			<Head>
 				<link rel='shortcut icon' href='/favicon.ico' />
-
 				<title>Alex Folea - Design & Development</title>
 				<meta name='viewport' content='initial-scale=1.0, width=device-width' />
+				<meta
+					name='description'
+					content='Alex Folea Design and Development page'
+				/>
 			</Head>
 
 			<div className='design__and__development'>

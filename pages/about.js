@@ -1,11 +1,17 @@
 import React from 'react';
 import Image from 'next/image';
+import Head from 'next/head';
 import Link from 'next/link';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const about = () => {
 	return (
 		<div className='about'>
+			<Head>
+				<title>Alex Folea - About page</title>
+				<meta name='description' content='Alex Folea description page' />
+				<link rel='icon' href='/favicon.ico' />
+			</Head>
 			<div className='about__wrapper'>
 				<div className='grid__container'>
 					<div className='grid__left'>
