@@ -23,8 +23,8 @@ const designAndDevelopment = () => {
 				<div className='page__banner'>
 					<Image
 						src='/process.svg'
-						width='500'
-						height='500'
+						width='400'
+						height='400'
 						alt='banner image design and development process'
 					/>
 				</div>

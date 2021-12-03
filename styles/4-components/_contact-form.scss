@@ -42,17 +42,18 @@
 
 		button {
 			display: inline-block;
-			color: $mono2;
+			color: $mono8;
 			font-size: 1.4rem;
 			padding: 1.5rem 5rem;
 			@include paragraph;
-			background: $mono6;
+			background: $mono4;
 			cursor: pointer;
 			transition: all 0.2s ease-in;
 			margin-bottom: 4rem;
 
 			&:hover {
 				background: $mono5;
+				color: $mono3;
 				transform: translateY(-0.4rem);
 				box-shadow: 0 0.1rem 0.4rem $cyan;
 			}
