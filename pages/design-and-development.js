@@ -208,7 +208,7 @@ const designAndDevelopment = () => {
 						<div className='faqs__container__grid__item'>
 							<h3>How long will my design last in terms of relevancy?</h3>
 							<p>
-								I design my sites with focus on legevity and flexibility, with
+								I design my sites with focus on longevity and flexibility, with
 								the ability to expand, update and scale your website as your
 								business grows and changes. The typical industry standard is to
 								update your website every 2-4 years, but I am happy to partner
