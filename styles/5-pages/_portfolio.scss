@@ -1,6 +1,7 @@
 .portfolio {
 	width: 100%;
-	// background: rgb(180, 180, 78);
+	position: relative;
+	z-index: 10;
 
 	&__wrapper {
 		// height: 100%;

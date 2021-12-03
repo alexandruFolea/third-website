@@ -3,32 +3,20 @@
 	flex-direction: column;
 	min-height: 100vh;
 
-	// background: #8e9eab; /* fallback for old browsers */
-	// background: -webkit-linear-gradient(
-	// 	to bottom,
-	// 	#eef2f3,
-	// 	#8e9eab
-	// ); /* Chrome 10-25, Safari 5.1-6 */
-	// background: linear-gradient(
-	// 	to bottom,
-	// 	#eef2f3,
-	// 	#8e9eab
-	// ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	// background: #757f9a; /* fallback for old browsers */
 	background: -webkit-linear-gradient(
 		to bottom,
 		#d7dde8,
 		#757f9a
 	); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(
-		to bottom,
-		#d7dde8,
-		#757f9a
-	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: linear-gradient(to bottom, #d7dde8, #757f9a);
 
 	main {
 		// width: 100vw;
 		flex: 1;
 		@include flex-center-column;
+	}
+	.tsparticles {
+		position: relative;
+		z-index: 0;
 	}
 }
