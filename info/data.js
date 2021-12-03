@@ -1,5 +1,13 @@
 export const projects = [
 	{
+		id: '6',
+		title: 'Space Tourism',
+		url: 'https://space-tourism-front-end-mentor-challenge.vercel.app/',
+		img: '/projects/space-tourism.png',
+		desc: 'Front-end Mentor Challenge',
+		stacks: ['Next.js', 'Sass'],
+	},
+	{
 		id: '5',
 		title: 'Law Firm',
 		url: 'https://asyousay-attorney.vercel.app/',
@@ -9,11 +17,11 @@ export const projects = [
 	},
 	{
 		id: '2',
-		title: 'Fitness Center Project',
+		title: 'Fitness Center',
 		url: 'https://okocha-gym.netlify.app/',
 		img: '/projects/gym-project.jpeg',
 		desc: 'Potential gym application',
-		stacks: ['React', 'Sass'],
+		stacks: ['React', 'Sass', 'React-Icons'],
 	},
 	{
 		id: '3',

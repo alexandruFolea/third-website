@@ -96,9 +96,13 @@
 						margin-bottom: 2rem;
 					}
 					h3 {
-						@include heading-3;
+						@include heading-1;
 						letter-spacing: 0.2rem;
 						color: $mono1;
+
+						@include lg {
+							@include heading-2;
+						}
 					}
 				}
 				.item__desc {
